@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Typewriter</h1>
+
+<button onclick="typeWriter()">Click me</button>
+<button onclick="otherthing()">reset</button>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = "Nullam sit amet odio blandit, elementum est a, lacinia ante. Fusce dictum semper mauris a luctus. Integer nec lacinia eros. Quisque vitae sollicitudin dui, id maximus arcu. Donec purus nisl, efficitur eleifend ligula quis, egestas venenatis lacus. Sed egestas molestie dui sed eleifend. Suspendisse iaculis tortor lectus, eu egestas enim auctor in. Mauris aliquet egestas metus quis fermentum. Cras dapibus nisi ut ante rhoncus, eget aliquet leo pellentesque. Nullam efficitur ante vel euismod vulputate. Maecenas dignissim turpis eget ultricies ornare. Pellentesque ipsum libero, placerat vel magna sed, dapibus dapibus felis. Quisque hendrerit id purus sit amet hendrerit. Maecenas pharetra nulla ut mollis mattis. Sed at eros ligula. Ut convallis risus et purus posuere, ut fermentum ipsum fringilla. Ut maximus purus eget orci aliquet, ac eleifend nulla consequat. Ut quis luctus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur ac enim vel lectus faucibus viverra id id diam. Nam molestie mauris ac mauris dignissim aliquet. Vestibulum sed dapibus libero. Vivamus tellus velit, hendrerit sed justo ac, tempor fringilla augue. Sed lacinia non nibh eget mattis. Pellentesque tempor, est non varius interdum, magna massa laoreet lectus, ut eleifend quam velit id risus. Nam in justo non erat fermentum laoreet. Cras bibendum diam posuere turpis molestie vehicula. Phasellus ac sem velit. In tempus libero ut dignissim semper. Donec fringilla accumsan ultrices. Maecenas suscipit viverra eros, ac pharetra urna ultricies sit amet. Vivamus ac est eget justo porttitor ornare at vitae dui. Aenean pharetra risus nisi, accumsan lacinia metus sagittis vitae. Nulla semper scelerisque nunc, et sodales justo cursus et. Ut interdum enim non est facilisis tristique. Vivamus quis dapibus quam, eget venenatis nunc. Vestibulum in posuere leo, non vulputate urna. Proin laoreet, tortor et tempus ultrices, nunc nibh pharetra risus, non vulputate nisl nisl at elit. Integer consectetur urna ut nisl interdum, et tincidunt dui scelerisque. Morbi suscipit aliquam sem, nec interdum sapien rutrum vel.";
+var speed = 1;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+};
+
+function otherthing(){
+    document.getElementById("demo") = "";
+    i = 0;
+};
+
+
+</script>
+
+</body>
+</html>
+
