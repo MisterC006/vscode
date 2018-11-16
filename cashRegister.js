@@ -4,7 +4,8 @@ let fieldAmount = document.getElementById("amount");
 let buttonSelect = document.getElementById("select");
 let shoppingCart = document.getElementById("shoppingCart");
 let price = document.getElementById("price");
-let checkout =document.getElementById("checkout");
+let checkout = document.getElementById("checkout");
+let checkoutButton = document.getElementById("checkoutButton");
 let buttonTrue = 0;
 let runningTotal = 0;
 let owedTotal   = 0;
@@ -40,6 +41,9 @@ if(productArray.includes(fieldBuy.value)){
     priceDiv.innerHTML=("Your total is $"+runningTotal);
     owedTotal = owedTotal+parseInt(price.value*fieldAmount.value);
     checkoutDiv.innerHTML=("You owe $"+owedTotal);
+    if(owedTotal< 0){
+        checkoutDiv.innerHTML=("You change is $"+owedTotal*-1);
+    }
 }
 else{
     alert("We do not sell that item. Please check you spelling and try again.");
@@ -48,7 +52,11 @@ else{
 
 });
 
-checkout.addEventListener("click", x =>{
-    
-})
+checkoutButton.addEventListener("click", x =>{
+     owedTotal = owedTotal-parseInt(checkout.value);
+     checkoutDiv.innerHTML=("You owe $"+owedTotal);
+    if(owedTotal< 0){
+        checkoutDiv.innerHTML=("You change is $"+owedTotal*-1);
+    }
+});
 
