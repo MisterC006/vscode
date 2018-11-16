@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <head>
-    Welcome to Stuff-Mart! We've got stuff, you have money, come buy at Stuff-Mart!
+    <h>Welcome to Stuff-Mart! We've got stuff, you have money, come buy at Stuff-Mart!</h>
+    <link rel="stylesheet" type="text/css" media="screen" href="cashRegister.css"/>
 </head>
 <body>
     <form>
         <input type="text" id="buyField" placeholder="What do you want?"/>
         <input type="number" id="amount" placeholder="How many do you want?"/>
+        <input type="number" id="price" placeholder="How much is the product?"/>
         <input type="button" id="select" value="Confirm"/>
     </form>
     This is your shopping cart!
+    <div id="runningTotal">
+        Your total is $0.00  
+    </div>
+    <input type="number" id="checkout" placeholder="Checkout"/>
+    <div id="checkoutDiv">
+        
+    </div>
     <div id="shoppingCart"> 
         The cart is empty right now.
+    </div>
+    <div id="cheatSheet">
+        Cheat Sheet </br>
+        Apple: $1
+        Bannana: $1
+        Orange: $2
+        Neel Pai: $0.2
+        Cody Leonard: $100
+        Febreez: $5
+        MacBook: $1000
+        PC: $500
+        ExpoMarker: $10
     </div>
 </body>
 </html>

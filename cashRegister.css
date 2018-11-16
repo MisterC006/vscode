@@ -1,0 +1,22 @@
+h{
+    font-size: 10mm;
+    color: red;
+    display: block;
+    padding: 0 65px 0 0;
+    text-decoration: none;
+    width:100%;
+    text-align:center;
+}
+body{
+    font-size: 8mm;
+    color: blue;
+    display: block;
+    padding: 0 65px 0 0;
+    text-decoration: none;
+    width:100%;
+    text-align:center;
+    background: black;
+}
+#cheatSheet{
+    color: goldenrod;
+}
